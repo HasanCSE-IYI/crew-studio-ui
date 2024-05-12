@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { UserCheck, Clipboard } from "lucide-react";
 
