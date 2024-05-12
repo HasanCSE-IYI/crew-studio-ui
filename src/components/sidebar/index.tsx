@@ -16,7 +16,7 @@ export const NODES = [
 
 export const Sidebar = () => {
   return (
-    <aside className="h-[calc(100vh-57px)] w-64 bg-gray-800 text-gray-300 p-4">
+    <aside className="h-[calc(100vh-57px)] w-64 bg-gray-50 text-gray-900 p-4 border-r">
       <nav>
         {NODES.map((node) => (
           <div
