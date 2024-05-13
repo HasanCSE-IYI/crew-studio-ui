@@ -5,6 +5,7 @@ import React, { DragEvent, useCallback } from "react";
 import { BaseNodeData, NODE_TYPES } from "@/types";
 import { Icon } from "..";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const NODES = [
   {
@@ -40,13 +41,14 @@ export const Sidebar = () => {
   return (
     <aside className="h-[calc(100vh-57px)] w-64 bg-gray-50 text-gray-900 p-4 border-r">
       <nav className="space-y-3">
-        <div
+        <Link
+          href="/workflow"
           key="default"
           className="flex items-center py-2 px-3 transition-colors duration-200 rounded bg-gray-700 text-white border cursor-pointer"
         >
           <Icon name="workflow" className="w-5 h-5 mr-3" />
           <span>Create New Workflow</span>
-        </div>
+        </Link>
         {pathname !== "/workflow" &&
           NODES.map((node) => (
             <div
