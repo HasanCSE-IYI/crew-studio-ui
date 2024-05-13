@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 
-import { WorkflowScreen } from "./screens";
+import { WorkflowScreen } from "../screens";
 
 const WorkflowBuilderPage = () => <WorkflowScreen />;
 

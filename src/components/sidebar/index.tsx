@@ -16,16 +16,18 @@ export const NODES = [
     type: "TASK",
     icon: "clipboard",
   },
+  {
+    label: "Output",
+    type: "OUTPUT",
+    icon: "file-output",
+  },
 ];
 
 export const Sidebar = () => {
   const onDragStart = useCallback(
     (event: DragEvent<HTMLDivElement>, data: BaseNodeData) => {
       event.dataTransfer.setData(`application/reactflow/label`, data.label);
-      event.dataTransfer.setData(
-        `application/reactflow/type`,
-        NODE_TYPES.BLOCK
-      );
+      event.dataTransfer.setData(`application/reactflow/type`, data.type);
       event.dataTransfer.setData(`application/reactflow/icon`, data.icon);
       event.dataTransfer.effectAllowed = "move";
     },
@@ -44,6 +46,7 @@ export const Sidebar = () => {
               onDragStart(event, {
                 label: node.label,
                 icon: node.icon,
+                type: node.type as NODE_TYPES,
               })
             }
           >

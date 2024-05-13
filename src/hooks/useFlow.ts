@@ -47,9 +47,9 @@ export const useFlow = () => {
 
       const newNode = {
         id: nanoid(),
-        type,
+        type: NODE_TYPES.BLOCK,
         position,
-        data: { label, icon },
+        data: { label, icon, type },
       };
 
       setNodes((nds: Node[]) => nds.concat(newNode));

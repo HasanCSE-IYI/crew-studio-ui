@@ -1,3 +1,5 @@
+"use client";
+
 import { Header, RightSidebar, Sidebar } from "@/components";
 import { WorkflowProvider } from "@/providers";
 import React, { PropsWithChildren } from "react";
