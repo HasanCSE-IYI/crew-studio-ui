@@ -2,6 +2,7 @@
 
 import { Header, RightSidebar, Sidebar } from "@/components";
 import { WorkflowProvider } from "@/providers";
+import { usePathname } from "next/navigation";
 import React, { PropsWithChildren } from "react";
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
